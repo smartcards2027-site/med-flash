@@ -13,7 +13,7 @@ var currentIndex = 0;
 var isFlipped = false;
 
 // جلب ملف الـ JSON
-fetch(lectureName + '.json')
+fetch('./med2.json?v=' + new Date().getTime())
     .then(response => {
         if (!response.ok) throw new Error("الملف غير موجود");
         return response.json();
