@@ -1,0 +1,90 @@
+<!DOCTYPE html>
+<html lang="ar" dir="rtl">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>فلاش كاردز طبية</title>
+    <script src="https://telegram.org/js/telegram-web-app.js"></script>
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            background-color: #f4f6f9;
+            margin: 0;
+            padding: 20px;
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            justify-content: center;
+            min-height: 100vh;
+        }
+        #lecture-title {
+            font-size: 18px;
+            color: #0088cc;
+            margin-bottom: 15px;
+            font-weight: bold;
+        }
+        .card {
+            background: white;
+            width: 100%;
+            max-width: 400px;
+            height: 250px;
+            border-radius: 15px;
+            box-shadow: 0 4px 15px rgba(0,0,0,0.1);
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            text-align: center;
+            padding: 20px;
+            box-sizing: border-box;
+            cursor: pointer;
+            position: relative;
+            transition: transform 0.3s;
+        }
+        .card p {
+            font-size: 16px;
+            color: #333;
+            line-height: 1.6;
+            margin: 0;
+        }
+        .buttons {
+            margin-top: 20px;
+            display: flex;
+            gap: 15px;
+        }
+        button {
+            background-color: #0088cc;
+            color: white;
+            border: none;
+            padding: 10px 20px;
+            border-radius: 8px;
+            font-size: 16px;
+            cursor: pointer;
+        }
+        button:active {
+            background-color: #006699;
+        }
+        #counter {
+            margin-top: 15px;
+            color: #666;
+            font-size: 14px;
+        }
+    </style>
+</head>
+<body>
+
+    <div id="lecture-title">المحاضرة الطبية</div>
+
+    <div class="card" id="card" onclick="flipCard()">
+        <p id="question">جاري التحميل...</p>
+    </div>
+
+    <div id="counter">0 / 0</div>
+
+    <div class="buttons">
+        <button onclick="prevCard()">السابق</button>
+        <button onclick="nextCard()">التالي</button>
+    </div>
+
+    <script src="app.js"></script>
+</body>
+</html>
